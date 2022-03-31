@@ -8,6 +8,8 @@ import {
     useLocation,
 } from "react-router-dom";
 import Userfront from "@userfront/react";
+import buttonSyles from './buttonStyles.module.css';
+
 
 Userfront.init("demo1234");
 
@@ -63,7 +65,7 @@ export default function App() {
 function Home() {
     return (
         <div>
-            <h2>Home</h2>
+            <h1>Home</h1>
             <SignupForm />
         </div>
     );
@@ -72,7 +74,7 @@ function Home() {
 function Login() {
     return (
         <div>
-            <h2>Login</h2>
+            <h1>Login</h1>
             <LoginForm />
         </div>
     );
@@ -81,7 +83,8 @@ function Login() {
 function PasswordReset() {
     return (
         <div>
-            <h2>Password Reset</h2>
+            <h1 className={buttonSyles.darkgreen}>Password Reset</h1>
+            <button className={buttonSyles.darkgreen}>Services Provided By CacheMoney</button>
             <PasswordResetForm />
         </div>
     );
@@ -91,7 +94,7 @@ function Dashboard() {
     const userData = JSON.stringify(Userfront.user, null, 2);
     return (
         <div>
-            <h2>Dashboard</h2>
+            <h1>Dashboard</h1>
             <pre>{userData}</pre>
             <button onClick={Userfront.logout}>Logout</button>
         </div>
