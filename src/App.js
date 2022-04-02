@@ -10,9 +10,7 @@ import {
 import Userfront from "@userfront/react";
 import buttonSyles from './buttonStyles.module.css';
 
-
 Userfront.init("demo1234");
-
 const SignupForm = Userfront.build({
     toolId: "nkmbbm",
 });
@@ -62,10 +60,11 @@ export default function App() {
     );
 }
 
+
 function Home() {
     return (
         <div>
-            <h1>Home</h1>
+            <h1 style={{ color: "darkgreen" }}>Home</h1>
             <SignupForm />
         </div>
     );
@@ -74,8 +73,8 @@ function Home() {
 function Login() {
     return (
         <div>
-            <h1>Login</h1>
-            <LoginForm />
+            <h1 style={{ color: "darkgreen" }}>Login</h1>
+            < LoginForm />
         </div>
     );
 }
@@ -94,8 +93,8 @@ function Dashboard() {
     const userData = JSON.stringify(Userfront.user, null, 2);
     return (
         <div>
-            <h1>Dashboard</h1>
-            <pre>{userData}</pre>
+            <h1 style={{ color: "darkgreen" }}> Dashboard</h1>
+            <pre style={{ color: "darkgreen" }}>{userData}</pre>
             <button onClick={Userfront.logout}>Logout</button>
         </div>
     );
